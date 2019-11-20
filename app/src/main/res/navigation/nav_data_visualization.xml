@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="rafaelgsm.example.data_visualization.HomeFragment"
+        android:label="homeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/actionGoToPie"
+            app:destination="@+id/pie_fragment" />
+
+        <action
+            android:id="@+id/actionGoToColunm"
+            app:destination="@+id/colunm_fragment" />
+
+        <action
+            android:id="@+id/actionGoToMulti"
+            app:destination="@+id/multi_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/pie_fragment"
+        android:name="rafaelgsm.example.data_visualization.charts.PieChartFragment"
+        android:label="pie_fragment"
+        tools:layout="@layout/fragment_pie_chart" />
+
+    <fragment
+        android:id="@+id/colunm_fragment"
+        android:name="rafaelgsm.example.data_visualization.charts.ColumnChartFragment"
+        android:label="colunm_fragment"
+        tools:layout="@layout/fragment_column_chart" />
+
+    <fragment
+        android:id="@+id/multi_fragment"
+        android:name="rafaelgsm.example.data_visualization.charts.MultipleChartsFragment"
+        android:label="multi_fragment"
+        tools:layout="@layout/fragment_multiple_charts" />
+
+</navigation>
